@@ -1,10 +1,13 @@
-import pandas as pd
+import csv
+num_rows = 0
 
-months = pd.read_csv('budget_data.csv')
-df = pd.read_csv('budget_data.csv')
-
-print ("Total Months: ", len(months)-1)
-print ("Total: {}" .format(df[''].sum())) 
+for row in open("budget_data.csv"):
+    num_rows += 1
+print("Total Months: " +num_rows)
 
 
+with open('budget_data.csv') as csvfile:
+  csvfile.next()
+  total = sum(int(r[1]) for r in csv.reader(csvfile))
+print(total)
 
