@@ -1,4 +1,8 @@
+import os
 import csv
+
+csv_file = os.path.join("resources", "budget_data.csv")
+
 num_rows = 0
 
 for row in open("budget_data.csv"):
